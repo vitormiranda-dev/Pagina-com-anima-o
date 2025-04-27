@@ -1,4 +1,12 @@
-/* Estilos gerais dos slides */
+/* Estilos Gerais */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Estilos dos slides */
 .item {
     background-color: var(--background);
     display: none;
@@ -14,7 +22,6 @@
     display: block;
 }
 
-/* Centro da tela */
 .center-content {
     position: relative;
     width: 100%;
@@ -25,27 +32,24 @@
     z-index: 3;
 }
 
-/* Estilo do título */
 .title {
-    font-size: 6rem;
+    font-size: 8vw; /* Olha aqui! Agora em vw, escala automática! */
     color: #ffffff;
     font-family: system-ui, sans-serif;
     font-weight: bold;
     text-align: center;
-    position: absolute; /* NOVO: absoluto! */
-    z-index: 2; /* Atrás da lata */
+    position: absolute;
+    z-index: 2;
     opacity: 0.7;
 }
 
-/* Estilo da lata */
 .refri {
-    width: 600px;
-    position: relative; /* A lata fica relativa para ficar em cima do título */
-    z-index: 3; /* Na frente do título */
+    width: 50vw; /* Agora escala automático também! */
+    max-width: 580px;
+    position: relative;
+    z-index: 3;
 }
 
-
-/* Estilo da fruta de fundo */
 .fruit {
     width: 90%;
     position: absolute;
@@ -78,7 +82,7 @@
     right: 30px;
 }
 
-/* Animações ao ativar */
+/* Animações */
 @keyframes toActive {
     from {
         top: 100%;
@@ -90,48 +94,29 @@
     animation: toActive 0.8s ease-in-out 1;
 }
 
-
-
-/* Título com animação */
-.title {
-    font-size: 10rem;
-    color: #ffffff;
-    font-family: system-ui, sans-serif;
-    font-weight: bold;
-    text-align: center;
-    position: absolute;
-    z-index: 2;
-    opacity: 0.8;
-}
-
-/* Quando o item fica ativo, anima o título */
-.item.active .title {
-    animation: titleDrop 0.8s ease forwards;
-}
-
 @keyframes titleDrop {
     from {
-        transform: translateY(100px); /* Agora começa embaixo */
+        transform: translateY(100px);
         opacity: 0;
     }
     to {
         transform: translateY(0);
         opacity: 1;
     }
+}
 
-    /* Adaptação para celular */
+.item.active .title {
+    animation: titleDrop 0.8s ease forwards;
+}
+
+/* Responsividade de verdade */
 @media (max-width: 768px) {
-    .title {
-        font-size: 4rem; /* título menor */
-    }
-
     .refri {
-        width: 100px; /* lata menor */
+        width: 60vw;
     }
 
-    .fruit {
-        width: 100%;
-        top: 10%; /* desce um pouco a fruta */
+    .title {
+        font-size: 10vw;
     }
 
     #prev, #next {
@@ -142,12 +127,12 @@
 }
 
 @media (max-width: 480px) {
-    .title {
-        font-size: 3rem;
+    .refri {
+        width: 70vw;
     }
 
-    .refri {
-        width: 200px;
+    .title {
+        font-size: 12vw;
     }
 
     #prev, #next {
@@ -155,6 +140,4 @@
         height: 35px;
         font-size: medium;
     }
-}
-
 }
