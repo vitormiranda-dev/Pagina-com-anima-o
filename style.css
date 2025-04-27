@@ -118,4 +118,43 @@
         transform: translateY(0);
         opacity: 1;
     }
+
+    /* Adaptação para celular */
+@media (max-width: 768px) {
+    .title {
+        font-size: 4rem; /* título menor */
+    }
+
+    .refri {
+        width: 300px; /* lata menor */
+    }
+
+    .fruit {
+        width: 100%;
+        top: 10%; /* desce um pouco a fruta */
+    }
+
+    #prev, #next {
+        width: 40px;
+        height: 40px;
+        font-size: large;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .refri {
+        width: 250px;
+    }
+
+    #prev, #next {
+        width: 35px;
+        height: 35px;
+        font-size: medium;
+    }
+}
+
 }
