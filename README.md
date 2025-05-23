@@ -11,6 +11,9 @@
     <li>HTML5</li>
     <li>CSS3 (com animações e keyframes)</li>
   </ul>
+  <h3 style="color: #d3ad7f;">🎮 Interatividade com JavaScript</h3>
+  <p>O projeto inclui um controle de carrossel feito com JavaScript puro, que permite navegar entre elementos visuais com botões de "próximo" e "anterior". Ele utiliza a classe <code>active</code>   
+    para destacar o item atual e oferece uma experiência de navegação cíclica entre os elementos da página.</p>
 
   <h3 style="margin-top: 2rem; color: #d3ad7f;">✨ Recursos</h3>
   <ul>
@@ -20,12 +23,7 @@
     <li>Responsividade básica para diferentes tamanhos de tela</li>
   </ul>
 
-  <h3 style="margin-top: 2rem; color: #d3ad7f;">📁 Estrutura do Projeto</h3>
-  <pre style="background-color: #f7f7f7; padding: 1rem; border-radius: 8px; overflow-x: auto;">
-📦 Pagina-com-animacao
- ┣ 📄 index.html
- ┗ 📄 style.css
-  </pre>
+
 
   <h3 style="margin-top: 2rem; color: #d3ad7f;">🙋‍♂️ Autor</h3>
   <p>Desenvolvido por <strong>Vitor Miranda</strong><br>
